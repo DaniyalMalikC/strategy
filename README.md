@@ -20,14 +20,24 @@ A production-ready Next.js boilerplate with TypeScript, Tailwind CSS, and modern
 
 ## Tech Stack
 
-- **Framework:** Next.js 16, React 19
-- **Language:** TypeScript 5.7
-- **Styling:** Tailwind CSS 3.4, SCSS
+- **Framework:** Next.js 16.1, React 19.2
+- **Language:** TypeScript 5.9
+- **Styling:** Tailwind CSS 4.1, SCSS (modern @use syntax)
 - **Animations:** Framer Motion, GSAP, Lenis, AOS
 - **State Management:** Zustand
 - **Icons:** Iconify
 - **Linting:** Biome
 - **Package Manager:** PNPM
+
+## Documentation
+
+For detailed documentation, see the `readme_instructions/` folder:
+- Project Structure & Architecture
+- Getting Started Guide
+- SCSS Architecture (modern @use syntax)
+- Tailwind v4 Upgrade Details
+- Complete Feature Summary
+- Testing Checklist
 
 ## Project Structure
 

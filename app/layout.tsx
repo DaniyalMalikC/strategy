@@ -4,7 +4,7 @@ import { Providers } from '@/providers/index';
 import { ErrorBoundary } from '@/components/organisms/ErrorBoundary';
 import { Header } from '@/components/organisms/Header';
 import { Footer } from '@/components/organisms/Footer';
-import '@styles/globals.scss';
+import '@/styles/globals.scss';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
