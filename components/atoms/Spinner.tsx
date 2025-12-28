@@ -14,11 +14,14 @@ export function Spinner({ size = 'md', className }: SpinnerProps) {
 
   return (
     <svg
-      className={cn('animate-spin text-primary-600', sizes[size], className)}
+      className={cn('animate-spin', sizes[size], className)}
+      style={{ color: 'var(--brand-primary)' }}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
+      aria-label="Loading spinner"
     >
+      <title>Loading</title>
       <circle
         className="opacity-25"
         cx="12"

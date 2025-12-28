@@ -1,48 +1,80 @@
 @use "tailwindcss";
 
 :root {
+  /* Amplixa Brand Colors - Light Mode */
+  --brand-primary: #BEB5B4;
+  --brand-primary-50: #F5F3F3;
+  --brand-primary-100: #EBE8E7;
+  --brand-primary-200: #D7D1CF;
+  --brand-primary-300: #C3BAB7;
+  --brand-primary-400: #BEB5B4;
+  --brand-primary-500: #BEB5B4;
+  --brand-primary-600: #9B9190;
+  --brand-primary-700: #786D6C;
+  --brand-primary-800: #554948;
+  --brand-primary-900: #322524;
+
+  --brand-secondary: #9F9283;
+  --brand-secondary-50: #F3F1EE;
+  --brand-secondary-100: #E7E3DD;
+  --brand-secondary-200: #CFC7BB;
+  --brand-secondary-300: #B7AB99;
+  --brand-secondary-400: #9F9283;
+  --brand-secondary-500: #9F9283;
+  --brand-secondary-600: #7F7569;
+  --brand-secondary-700: #5F584F;
+  --brand-secondary-800: #3F3A34;
+  --brand-secondary-900: #1F1D1A;
+
+  /* Theme Variables */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1F1D1A;
   --card: #ffffff;
-  --card-foreground: #171717;
+  --card-foreground: #1F1D1A;
   --popover: #ffffff;
-  --popover-foreground: #171717;
-  --primary: #3b82f6;
-  --primary-foreground: #ffffff;
-  --secondary: #a855f7;
+  --popover-foreground: #1F1D1A;
+  --primary: var(--brand-primary);
+  --primary-foreground: #1F1D1A;
+  --secondary: var(--brand-secondary);
   --secondary-foreground: #ffffff;
-  --muted: #f5f5f5;
-  --muted-foreground: #737373;
-  --accent: #f5f5f5;
-  --accent-foreground: #171717;
-  --destructive: #ef4444;
+  --muted: #F5F3F3;
+  --muted-foreground: #5F584F;
+  --accent: #F3F1EE;
+  --accent-foreground: #1F1D1A;
+  --destructive: #DC2626;
   --destructive-foreground: #ffffff;
-  --border: #e5e5e5;
-  --input: #e5e5e5;
-  --ring: #3b82f6;
+  --border: #E7E3DD;
+  --input: #E7E3DD;
+  --ring: var(--brand-primary-600);
   --radius: 0.5rem;
+
+  /* Animation Timing */
+  --transition-fast: 150ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --card: #171717;
-  --card-foreground: #ededed;
-  --popover: #171717;
-  --popover-foreground: #ededed;
-  --primary: #3b82f6;
-  --primary-foreground: #ffffff;
-  --secondary: #a855f7;
-  --secondary-foreground: #ffffff;
-  --muted: #262626;
-  --muted-foreground: #a3a3a3;
-  --accent: #262626;
-  --accent-foreground: #ededed;
-  --destructive: #ef4444;
+  /* Amplixa Brand Colors - Dark Mode */
+  --background: #0F0E0D;
+  --foreground: #F5F3F3;
+  --card: #1F1D1A;
+  --card-foreground: #F5F3F3;
+  --popover: #1F1D1A;
+  --popover-foreground: #F5F3F3;
+  --primary: var(--brand-primary-300);
+  --primary-foreground: #0F0E0D;
+  --secondary: var(--brand-secondary-300);
+  --secondary-foreground: #0F0E0D;
+  --muted: #322524;
+  --muted-foreground: #B7AB99;
+  --accent: #3F3A34;
+  --accent-foreground: #F5F3F3;
+  --destructive: #EF4444;
   --destructive-foreground: #ffffff;
-  --border: #262626;
-  --input: #262626;
-  --ring: #3b82f6;
+  --border: #3F3A34;
+  --input: #3F3A34;
+  --ring: var(--brand-primary-400);
 }
 
 * {
@@ -59,7 +91,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family:
-    var(--font-inter),
+    var(--font-montserrat),
     system-ui,
     -apple-system,
     sans-serif;
@@ -127,4 +159,21 @@ a {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Amplixa Font System */
+.font-logo {
+  font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
+}
+
+.font-heading {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-montserrat), 'Montserrat', 'Roboto', 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
 }

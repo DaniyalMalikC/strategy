@@ -18,17 +18,27 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
+    'inline-flex items-center justify-center font-heading font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
-  const variants = {
-    primary:
-      'bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 active:bg-primary-800',
-    secondary:
-      'bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-500 active:bg-secondary-800',
-    outline:
-      'border-2 border-primary-600 text-primary-600 hover:bg-primary-50 dark:hover:bg-primary-950 focus:ring-primary-500',
-    ghost:
-      'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 focus:ring-gray-500',
+  const variantStyles = {
+    primary: {
+      backgroundColor: 'var(--brand-primary)',
+      color: '#ffffff',
+    },
+    secondary: {
+      backgroundColor: 'var(--brand-secondary)',
+      color: '#ffffff',
+    },
+    outline: {
+      borderWidth: '2px',
+      borderColor: 'var(--brand-primary)',
+      color: 'var(--brand-primary)',
+      backgroundColor: 'transparent',
+    },
+    ghost: {
+      color: 'var(--foreground)',
+      backgroundColor: 'transparent',
+    },
   };
 
   const sizes = {
@@ -39,7 +49,8 @@ export function Button({
 
   return (
     <button
-      className={cn(baseStyles, variants[variant], sizes[size], className)}
+      className={cn(baseStyles, sizes[size], className)}
+      style={variantStyles[variant]}
       disabled={disabled || isLoading}
       {...props}
       type={props.type || 'button'}
@@ -51,7 +62,9 @@ export function Button({
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
+            aria-label="Loading spinner"
           >
+            <title>Loading</title>
             <circle
               className="opacity-25"
               cx="12"

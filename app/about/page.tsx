@@ -1,49 +1,44 @@
-import { generateMetadata as generateSEOMetadata } from '@/utils/seo';
+import { PAGE_METADATA } from '@/utils/metadata';
 import { Icon } from '@/components/atoms/Icon';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/molecules/Card';
+import { BRAND, HEADINGS } from '@/constants/copy';
 
-export const metadata = generateSEOMetadata({
-  title: 'About',
-  description: 'Learn more about Strategy - a production-ready Next.js boilerplate',
-  keywords: ['Next.js', 'TypeScript', 'Boilerplate', 'React'],
-});
+export const metadata = PAGE_METADATA.about;
 
 export default function AboutPage() {
-  const tech = [
-    { name: 'Next.js 16', icon: 'simple-icons:nextdotjs' },
-    { name: 'React 19', icon: 'simple-icons:react' },
-    { name: 'TypeScript', icon: 'simple-icons:typescript' },
-    { name: 'Tailwind CSS', icon: 'simple-icons:tailwindcss' },
-    { name: 'Framer Motion', icon: 'simple-icons:framer' },
-    { name: 'Zustand', icon: 'ph:database-bold' },
+  const values = [
+    { name: 'Innovation', icon: 'ph:lightbulb-bold', description: 'Pushing boundaries with creative solutions' },
+    { name: 'Excellence', icon: 'ph:star-bold', description: 'Delivering quality in everything we do' },
+    { name: 'Integrity', icon: 'ph:shield-check-bold', description: 'Transparent and honest communication' },
+    { name: 'Growth', icon: 'ph:trend-up-bold', description: 'Your success is our success' },
+    { name: 'Collaboration', icon: 'ph:handshake-bold', description: 'Working together towards common goals' },
+    { name: 'Impact', icon: 'ph:target-bold', description: 'Creating meaningful digital experiences' },
   ];
 
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="mx-auto max-w-4xl">
-        <h1 className="mb-4 text-center">About Strategy</h1>
-        <p className="mb-12 text-center text-lg text-gray-600 dark:text-gray-400">
-          A modern, production-ready Next.js boilerplate with best practices
+        <h1 className="font-heading mb-4 text-center text-5xl font-semibold" style={{ color: 'var(--foreground)' }}>
+          {HEADINGS.about.main}
+        </h1>
+        <p className="font-body mb-12 text-center text-lg" style={{ color: 'var(--muted-foreground)' }}>
+          {BRAND.longDescription}
         </p>
 
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>
-              <Icon icon="ph:info-bold" size={24} className="mr-2 inline" />
-              What is Strategy?
+              <Icon icon="ph:target-bold" size={24} className="mr-2 inline" />
+              {HEADINGS.about.mission}
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4 text-gray-600 dark:text-gray-400">
+            <div className="font-body space-y-4" style={{ color: 'var(--muted-foreground)' }}>
               <p>
-                Strategy is a comprehensive Next.js boilerplate designed to kickstart your
-                next project with modern tools and best practices. It combines the power of
-                Next.js 16, React 19, and TypeScript with a scalable architecture.
+                At {BRAND.name}, we believe in the transformative power of digital innovation. Our mission is to help businesses of all sizes amplify their digital presence through strategic thinking, creative excellence, and cutting-edge technology.
               </p>
               <p>
-                Built with production in mind, it includes essential features like error
-                boundaries, SEO optimization, theme management, and a robust component
-                library following atomic design principles.
+                We combine data-driven insights with creative storytelling to deliver solutions that not only look great but drive real business results. From startups to established enterprises, we partner with our clients to build digital experiences that engage, convert, and inspire.
               </p>
             </div>
           </CardContent>
@@ -52,19 +47,23 @@ export default function AboutPage() {
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>
-              <Icon icon="ph:stack-bold" size={24} className="mr-2 inline" />
-              Technology Stack
+              <Icon icon="ph:heart-bold" size={24} className="mr-2 inline" />
+              {HEADINGS.about.values}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-              {tech.map((item) => (
+              {values.map((item) => (
                 <div
                   key={item.name}
-                  className="flex items-center gap-3 rounded-lg border border-gray-200 p-4 dark:border-gray-800"
+                  className="flex flex-col gap-2 rounded-lg p-4"
+                  style={{ borderWidth: '1px', borderColor: 'var(--border)' }}
                 >
-                  <Icon icon={item.icon} size={32} className="text-primary-600" />
-                  <span className="font-medium">{item.name}</span>
+                  <div style={{ color: 'var(--brand-primary)' }}>
+                    <Icon icon={item.icon} size={32} />
+                  </div>
+                  <span className="font-heading font-semibold" style={{ color: 'var(--foreground)' }}>{item.name}</span>
+                  <span className="font-body text-sm" style={{ color: 'var(--muted-foreground)' }}>{item.description}</span>
                 </div>
               ))}
             </div>
@@ -74,43 +73,47 @@ export default function AboutPage() {
         <Card>
           <CardHeader>
             <CardTitle>
-              <Icon icon="ph:lightbulb-bold" size={24} className="mr-2 inline" />
-              Key Features
+              <Icon icon="ph:rocket-launch-bold" size={24} className="mr-2 inline" />
+              {HEADINGS.about.approach}
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2 text-gray-600 dark:text-gray-400">
+            <ul className="font-body space-y-3" style={{ color: 'var(--muted-foreground)' }}>
               <li className="flex items-start">
-                <Icon icon="ph:check-circle-bold" size={20} className="mr-2 mt-0.5 text-green-600" />
-                <span>Atomic Design architecture for scalable components</span>
+                <div className="mr-2 mt-0.5" style={{ color: 'var(--brand-primary)' }}>
+                  <Icon icon="ph:check-circle-bold" size={20} />
+                </div>
+                <span><strong style={{ color: 'var(--foreground)' }}>Discovery:</strong> Understanding your unique business goals and challenges</span>
               </li>
               <li className="flex items-start">
-                <Icon icon="ph:check-circle-bold" size={20} className="mr-2 mt-0.5 text-green-600" />
-                <span>Strict TypeScript configuration for type safety</span>
+                <div className="mr-2 mt-0.5" style={{ color: 'var(--brand-primary)' }}>
+                  <Icon icon="ph:check-circle-bold" size={20} />
+                </div>
+                <span><strong style={{ color: 'var(--foreground)' }}>Strategy:</strong> Crafting data-driven plans aligned with your objectives</span>
               </li>
               <li className="flex items-start">
-                <Icon icon="ph:check-circle-bold" size={20} className="mr-2 mt-0.5 text-green-600" />
-                <span>Global state management with Zustand</span>
+                <div className="mr-2 mt-0.5" style={{ color: 'var(--brand-primary)' }}>
+                  <Icon icon="ph:check-circle-bold" size={20} />
+                </div>
+                <span><strong style={{ color: 'var(--foreground)' }}>Design:</strong> Creating beautiful experiences that resonate with your audience</span>
               </li>
               <li className="flex items-start">
-                <Icon icon="ph:check-circle-bold" size={20} className="mr-2 mt-0.5 text-green-600" />
-                <span>Built-in dark mode with theme persistence</span>
+                <div className="mr-2 mt-0.5" style={{ color: 'var(--brand-primary)' }}>
+                  <Icon icon="ph:check-circle-bold" size={20} />
+                </div>
+                <span><strong style={{ color: 'var(--foreground)' }}>Development:</strong> Building scalable solutions with modern technology</span>
               </li>
               <li className="flex items-start">
-                <Icon icon="ph:check-circle-bold" size={20} className="mr-2 mt-0.5 text-green-600" />
-                <span>SEO optimized with metadata generation</span>
+                <div className="mr-2 mt-0.5" style={{ color: 'var(--brand-primary)' }}>
+                  <Icon icon="ph:check-circle-bold" size={20} />
+                </div>
+                <span><strong style={{ color: 'var(--foreground)' }}>Optimization:</strong> Continuously improving performance and results</span>
               </li>
               <li className="flex items-start">
-                <Icon icon="ph:check-circle-bold" size={20} className="mr-2 mt-0.5 text-green-600" />
-                <span>Error boundaries and loading states</span>
-              </li>
-              <li className="flex items-start">
-                <Icon icon="ph:check-circle-bold" size={20} className="mr-2 mt-0.5 text-green-600" />
-                <span>Animations with Framer Motion and GSAP</span>
-              </li>
-              <li className="flex items-start">
-                <Icon icon="ph:check-circle-bold" size={20} className="mr-2 mt-0.5 text-green-600" />
-                <span>Production-ready deployment configuration</span>
+                <div className="mr-2 mt-0.5" style={{ color: 'var(--brand-primary)' }}>
+                  <Icon icon="ph:check-circle-bold" size={20} />
+                </div>
+                <span><strong style={{ color: 'var(--foreground)' }}>Support:</strong> Providing ongoing guidance and transparent communication</span>
               </li>
             </ul>
           </CardContent>
