@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -23,51 +19,21 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@components/*": [
-        "./components/*"
-      ],
-      "@atoms/*": [
-        "./components/atoms/*"
-      ],
-      "@molecules/*": [
-        "./components/molecules/*"
-      ],
-      "@organisms/*": [
-        "./components/organisms/*"
-      ],
-      "@features/*": [
-        "./features/*"
-      ],
-      "@hooks/*": [
-        "./hooks/*"
-      ],
-      "@utils/*": [
-        "./utils/*"
-      ],
-      "@services/*": [
-        "./services/*"
-      ],
-      "@api/*": [
-        "./api/*"
-      ],
-      "@providers/*": [
-        "./providers/*"
-      ],
-      "@stores/*": [
-        "./stores/*"
-      ],
-      "@types/*": [
-        "./types/*"
-      ],
-      "@styles/*": [
-        "./styles/*"
-      ],
-      "@constants/*": [
-        "./constants/*"
-      ]
+      "@/*": ["./*"],
+      "@components/*": ["./components/*"],
+      "@atoms/*": ["./components/atoms/*"],
+      "@molecules/*": ["./components/molecules/*"],
+      "@organisms/*": ["./components/organisms/*"],
+      "@features/*": ["./features/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@utils/*": ["./utils/*"],
+      "@services/*": ["./services/*"],
+      "@api/*": ["./api/*"],
+      "@providers/*": ["./providers/*"],
+      "@stores/*": ["./stores/*"],
+      "@types/*": ["./types/*"],
+      "@styles/*": ["./styles/*"],
+      "@constants/*": ["./constants/*"]
     },
     "strictNullChecks": true,
     "strictFunctionTypes": true,
@@ -87,7 +53,5 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

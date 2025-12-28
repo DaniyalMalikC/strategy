@@ -50,8 +50,7 @@ export const DESCRIPTIONS = {
       'Ready to amplify your digital presence? Get in touch with our team today and start your transformation journey.',
   },
   features: {
-    innovative:
-      'Cutting-edge solutions powered by the latest technology and creative thinking',
+    innovative: 'Cutting-edge solutions powered by the latest technology and creative thinking',
     datadriven: 'Strategic decisions backed by analytics and real-world performance metrics',
     customized: 'Tailored strategies designed specifically for your unique business goals',
     results: 'Proven track record of delivering measurable business growth and ROI',

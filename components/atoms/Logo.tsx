@@ -32,10 +32,7 @@ export function Logo({ className, variant = 'full', size = 'md' }: LogoProps) {
           stroke="var(--brand-secondary)"
           strokeWidth="2"
         />
-        <path
-          d="M20 10L28 15V25L20 30L12 25V15L20 10Z"
-          fill="var(--brand-secondary)"
-        />
+        <path d="M20 10L28 15V25L20 30L12 25V15L20 10Z" fill="var(--brand-secondary)" />
         <text
           x="20"
           y="24"
@@ -78,10 +75,7 @@ export function Logo({ className, variant = 'full', size = 'md' }: LogoProps) {
           stroke="var(--brand-secondary)"
           strokeWidth="2"
         />
-        <path
-          d="M20 10L28 15V25L20 30L12 25V15L20 10Z"
-          fill="var(--brand-secondary)"
-        />
+        <path d="M20 10L28 15V25L20 30L12 25V15L20 10Z" fill="var(--brand-secondary)" />
         <text
           x="20"
           y="24"

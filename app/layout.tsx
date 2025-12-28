@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
-import { Bebas_Neue, Poppins, Montserrat } from 'next/font/google';
-import { Providers } from '@/providers/index';
 import { ErrorBoundary } from '@/components/organisms/ErrorBoundary';
-import { Header } from '@/components/organisms/Header';
 import { Footer } from '@/components/organisms/Footer';
+import { Header } from '@/components/organisms/Header';
+import { Providers } from '@/providers/index';
+import type { Metadata } from 'next';
+import { Bebas_Neue, Montserrat, Poppins } from 'next/font/google';
 import '@/styles/globals.scss';
 
 const bebasNeue = Bebas_Neue({
@@ -48,9 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${bebasNeue.variable} ${poppins.variable} ${montserrat.variable}`}
-      >
+      <body className={`${bebasNeue.variable} ${poppins.variable} ${montserrat.variable}`}>
         <ErrorBoundary>
           <Providers>
             <div className="flex min-h-screen flex-col">

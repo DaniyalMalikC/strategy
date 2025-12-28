@@ -16,9 +16,7 @@ export function Loading({ fullScreen = true, message, className }: LoadingProps)
     <div className={cn(containerClass, className)}>
       <div className="flex flex-col items-center gap-4">
         <Spinner size="lg" />
-        {message && (
-          <p className="text-sm text-gray-600 dark:text-gray-400">{message}</p>
-        )}
+        {message && <p className="text-sm text-gray-600 dark:text-gray-400">{message}</p>}
       </div>
     </div>
   );

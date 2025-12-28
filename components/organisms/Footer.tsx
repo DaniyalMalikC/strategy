@@ -1,14 +1,17 @@
-import Link from 'next/link';
 import { Icon } from '@/components/atoms/Icon';
 import { Logo } from '@/components/atoms/Logo';
-import { BRAND, CONTACT, SOCIAL, LABELS } from '@/constants/copy';
 import { ROUTES } from '@/constants/app';
+import { BRAND, CONTACT, LABELS, SOCIAL } from '@/constants/copy';
+import Link from 'next/link';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t backdrop-blur-md" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--background)' }}>
+    <footer
+      className="border-t backdrop-blur-md"
+      style={{ borderColor: 'var(--border)', backgroundColor: 'var(--background)' }}
+    >
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand Section */}
@@ -17,34 +20,56 @@ export function Footer() {
             <p className="mb-4 max-w-md font-body text-sm" style={{ color: 'var(--foreground)' }}>
               {BRAND.shortDescription}
             </p>
-            <p className="font-body text-sm font-semibold" style={{ color: 'var(--brand-primary)' }}>
+            <p
+              className="font-body text-sm font-semibold"
+              style={{ color: 'var(--brand-primary)' }}
+            >
               {BRAND.tagline}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="col-span-1">
-            <h3 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--foreground)' }}>
+            <h3
+              className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider"
+              style={{ color: 'var(--foreground)' }}
+            >
               {LABELS.footer.company}
             </h3>
             <ul className="space-y-2 font-body text-sm">
               <li>
-                <Link href={ROUTES.ABOUT} className="transition-colors" style={{ color: 'var(--foreground)' }}>
+                <Link
+                  href={ROUTES.ABOUT}
+                  className="transition-colors"
+                  style={{ color: 'var(--foreground)' }}
+                >
                   {LABELS.nav.about}
                 </Link>
               </li>
               <li>
-                <Link href={ROUTES.SERVICES} className="transition-colors" style={{ color: 'var(--foreground)' }}>
+                <Link
+                  href={ROUTES.SERVICES}
+                  className="transition-colors"
+                  style={{ color: 'var(--foreground)' }}
+                >
                   {LABELS.nav.services}
                 </Link>
               </li>
               <li>
-                <Link href={ROUTES.PORTFOLIO} className="transition-colors" style={{ color: 'var(--foreground)' }}>
+                <Link
+                  href={ROUTES.PORTFOLIO}
+                  className="transition-colors"
+                  style={{ color: 'var(--foreground)' }}
+                >
                   {LABELS.nav.portfolio}
                 </Link>
               </li>
               <li>
-                <Link href={ROUTES.CONTACT} className="transition-colors" style={{ color: 'var(--foreground)' }}>
+                <Link
+                  href={ROUTES.CONTACT}
+                  className="transition-colors"
+                  style={{ color: 'var(--foreground)' }}
+                >
                   {LABELS.nav.contact}
                 </Link>
               </li>
@@ -53,17 +78,26 @@ export function Footer() {
 
           {/* Contact Information */}
           <div className="col-span-1">
-            <h3 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider" style={{ color: 'var(--foreground)' }}>
+            <h3
+              className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider"
+              style={{ color: 'var(--foreground)' }}
+            >
               {LABELS.footer.contact}
             </h3>
             <ul className="space-y-2 font-body text-sm" style={{ color: 'var(--foreground)' }}>
               <li>
-                <a href={`mailto:${CONTACT.email}`} className="transition-colors hover:text-[var(--brand-primary)]">
+                <a
+                  href={`mailto:${CONTACT.email}`}
+                  className="transition-colors hover:text-[var(--brand-primary)]"
+                >
                   {CONTACT.email}
                 </a>
               </li>
               <li>
-                <a href={`tel:${CONTACT.phone.replace(/\s/g, '')}`} className="transition-colors hover:text-[var(--brand-primary)]">
+                <a
+                  href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
+                  className="transition-colors hover:text-[var(--brand-primary)]"
+                >
                   {CONTACT.phone}
                 </a>
               </li>

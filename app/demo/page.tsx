@@ -1,14 +1,20 @@
 'use client';
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Button } from '@/components/atoms/Button';
 import { Icon } from '@/components/atoms/Icon';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/molecules/Card';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/molecules/Card';
+import { useDebounce } from '@/hooks/useDebounce';
+import { useIsMobile } from '@/hooks/useMediaQuery';
 import { useThemeStore } from '@/stores/themeStore';
 import { useUIStore } from '@/stores/uiStore';
-import { useIsMobile } from '@/hooks/useMediaQuery';
-import { useDebounce } from '@/hooks/useDebounce';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export default function DemoPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -97,20 +103,14 @@ export default function DemoPage() {
                 <Icon icon="ph:spinner-bold" size={24} className="mr-2 inline" />
                 Loading State
               </CardTitle>
-              <CardDescription>
-                UI store for managing global loading states
-              </CardDescription>
+              <CardDescription>UI store for managing global loading states</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
                 <p className="text-sm">
                   Loading: <span className="font-semibold">{isLoading ? 'Yes' : 'No'}</span>
                 </p>
-                <Button
-                  onClick={handleLoadingDemo}
-                  isLoading={isLoading}
-                  variant="primary"
-                >
+                <Button onClick={handleLoadingDemo} isLoading={isLoading} variant="primary">
                   Trigger Loading
                 </Button>
               </div>
@@ -129,17 +129,13 @@ export default function DemoPage() {
                 <Icon icon="ph:devices-bold" size={24} className="mr-2 inline" />
                 Media Queries
               </CardTitle>
-              <CardDescription>
-                Custom hooks for responsive design detection
-              </CardDescription>
+              <CardDescription>Custom hooks for responsive design detection</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-2">
                 <p className="text-sm">
                   Device type:{' '}
-                  <span className="font-semibold">
-                    {isMobile ? 'Mobile' : 'Desktop/Tablet'}
-                  </span>
+                  <span className="font-semibold">{isMobile ? 'Mobile' : 'Desktop/Tablet'}</span>
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Resize your browser to see this change
@@ -160,9 +156,7 @@ export default function DemoPage() {
                 <Icon icon="ph:timer-bold" size={24} className="mr-2 inline" />
                 Debounce Hook
               </CardTitle>
-              <CardDescription>
-                Optimized search with debounce functionality
-              </CardDescription>
+              <CardDescription>Optimized search with debounce functionality</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
@@ -174,7 +168,8 @@ export default function DemoPage() {
                   className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2 dark:border-gray-700 dark:bg-gray-800"
                 />
                 <p className="text-sm">
-                  Debounced value: <span className="font-semibold">{debouncedSearch || 'None'}</span>
+                  Debounced value:{' '}
+                  <span className="font-semibold">{debouncedSearch || 'None'}</span>
                 </p>
               </div>
             </CardContent>
@@ -193,9 +188,7 @@ export default function DemoPage() {
                 <Icon icon="ph:magic-wand-bold" size={24} className="mr-2 inline" />
                 Framer Motion Animations
               </CardTitle>
-              <CardDescription>
-                Smooth animations powered by Framer Motion
-              </CardDescription>
+              <CardDescription>Smooth animations powered by Framer Motion</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
@@ -226,9 +219,7 @@ export default function DemoPage() {
                 <Icon icon="ph:paint-brush-bold" size={24} className="mr-2 inline" />
                 Button Variants
               </CardTitle>
-              <CardDescription>
-                Multiple button styles and sizes
-              </CardDescription>
+              <CardDescription>Multiple button styles and sizes</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">

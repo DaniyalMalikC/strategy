@@ -1,6 +1,6 @@
+import type { Theme } from '@/types/common';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import type { Theme } from '@/types/common';
 
 interface ThemeStore {
   theme: Theme;

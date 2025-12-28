@@ -7,10 +7,7 @@ class ApiService {
     this.baseUrl = baseUrl;
   }
 
-  private async request<T>(
-    endpoint: string,
-    options?: RequestInit,
-  ): Promise<ApiResponse<T>> {
+  private async request<T>(endpoint: string, options?: RequestInit): Promise<ApiResponse<T>> {
     try {
       const response = await fetch(`${this.baseUrl}${endpoint}`, {
         headers: {
@@ -66,6 +63,4 @@ class ApiService {
   }
 }
 
-export const api = new ApiService(
-  process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
-);
+export const api = new ApiService(process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api');

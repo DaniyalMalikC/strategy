@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react';
 import { cn } from '@/utils/cn';
+import type { ReactNode } from 'react';
 
 interface CardProps {
   children: ReactNode;
@@ -45,9 +45,7 @@ interface CardDescriptionProps {
 }
 
 export function CardDescription({ children, className }: CardDescriptionProps) {
-  return (
-    <p className={cn('text-sm text-gray-600 dark:text-gray-400', className)}>{children}</p>
-  );
+  return <p className={cn('text-sm text-gray-600 dark:text-gray-400', className)}>{children}</p>;
 }
 
 interface CardContentProps {

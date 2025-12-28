@@ -1,5 +1,5 @@
-import { NextResponse } from 'next/server';
 import type { ApiResponse } from '@/types/common';
+import { NextResponse } from 'next/server';
 
 interface HelloResponse {
   message: string;
@@ -17,7 +17,7 @@ export async function GET(): Promise<NextResponse<ApiResponse<HelloResponse>>> {
       data,
       success: true,
     });
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json(
       {
         error: 'Internal server error',

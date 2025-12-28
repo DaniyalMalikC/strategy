@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect } from 'react';
 import AOS from 'aos';
+import { useEffect } from 'react';
 import 'aos/dist/aos.css';
 
 export function AnimationProvider({ children }: { children: React.ReactNode }) {

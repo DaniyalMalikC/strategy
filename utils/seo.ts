@@ -1,15 +1,9 @@
-import type { Metadata } from 'next';
-import type { SEOMetadata } from '@/types/common';
 import { APP_NAME, APP_URL } from '@/constants/app';
+import type { SEOMetadata } from '@/types/common';
+import type { Metadata } from 'next';
 
 export function generateMetadata(seo: SEOMetadata): Metadata {
-  const {
-    title,
-    description,
-    keywords = [],
-    ogImage = `${APP_URL}/og-image.jpg`,
-    canonical,
-  } = seo;
+  const { title, description, keywords = [], ogImage = `${APP_URL}/og-image.jpg`, canonical } = seo;
 
   const fullTitle = title.includes(APP_NAME) ? title : `${title} | ${APP_NAME}`;
 

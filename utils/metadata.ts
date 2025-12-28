@@ -1,5 +1,5 @@
-import type { Metadata } from 'next';
 import { BRAND, DESCRIPTIONS } from '@/constants/copy';
+import type { Metadata } from 'next';
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://amplixa.com';
 

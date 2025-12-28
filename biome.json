@@ -37,14 +37,6 @@
     }
   },
   "files": {
-    "ignore": [
-      "node_modules",
-      ".next",
-      "dist",
-      "build",
-      ".cache",
-      "*.config.js",
-      "*.config.ts"
-    ]
+    "ignore": ["node_modules", ".next", "dist", "build", ".cache", "*.config.js", "*.config.ts"]
   }
 }
