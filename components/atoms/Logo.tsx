@@ -25,6 +25,7 @@ export function Logo({ className, variant = 'full', size = 'md' }: LogoProps) {
         xmlns="http://www.w3.org/2000/svg"
         className={cn('', className)}
       >
+        <title>Amplixa logo icon</title>
         <path
           d="M20 2L35 12V28L20 38L5 28V12L20 2Z"
           fill="var(--brand-primary)"
@@ -70,6 +71,7 @@ export function Logo({ className, variant = 'full', size = 'md' }: LogoProps) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>Amplixa logo icon</title>
         <path
           d="M20 2L35 12V28L20 38L5 28V12L20 2Z"
           fill="var(--brand-primary)"
