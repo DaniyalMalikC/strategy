@@ -26,7 +26,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#f6f3ef] pb-24 pt-12 md:pt-10">
+    <section className="relative w-full overflow-hidden bg-[#f6f3ef] pb-24 pt-20 md:pt-24">
       <div className="container mx-auto px-4 md:px-6">
         {/* Hero Content */}
         <div className="mx-auto max-w-5xl text-center">
