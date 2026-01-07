@@ -21,25 +21,15 @@ export function Button({
     'inline-flex items-center justify-center font-heading font-medium transition-all rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed';
 
   const variantStyles = {
-    primary: {
-      backgroundColor: 'var(--brand-primary)',
-      color: '#ffffff',
-    },
-    secondary: {
-      backgroundColor: 'var(--brand-secondary)',
-      color: '#ffffff',
-    },
-    outline: {
-      borderWidth: '2px',
-      borderColor: 'var(--brand-primary)',
-      color: 'var(--brand-primary)',
-      backgroundColor: 'transparent',
-    },
-    ghost: {
-      color: 'var(--foreground)',
-      backgroundColor: 'transparent',
-    },
-  };
+    primary:
+      'bg-[var(--brand-primary)] text-white hover:bg-[var(--brand-primary-600)] focus:ring-[var(--brand-primary-600)]',
+    secondary:
+      'bg-[var(--brand-secondary)] text-white hover:bg-[var(--brand-secondary-600)] focus:ring-[var(--brand-secondary-500)]',
+    outline:
+      'border-2 border-[var(--brand-primary)] text-[var(--brand-primary)] bg-transparent hover:bg-[var(--brand-primary-50)] focus:ring-[var(--brand-primary-600)]',
+    ghost:
+      'text-[var(--foreground)] bg-transparent hover:bg-gray-100 focus:ring-[var(--brand-primary-600)]',
+  } as const;
 
   const sizes = {
     sm: 'px-3 py-1.5 text-sm',
@@ -49,8 +39,7 @@ export function Button({
 
   return (
     <button
-      className={cn(baseStyles, sizes[size], className)}
-      style={variantStyles[variant]}
+      className={cn(baseStyles, sizes[size], variantStyles[variant], className)}
       disabled={disabled || isLoading}
       {...props}
       type={props.type || 'button'}

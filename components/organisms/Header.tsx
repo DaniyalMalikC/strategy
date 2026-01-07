@@ -30,9 +30,6 @@ export function Header() {
         {/* Logo */}
         <Link href={ROUTES.HOME} className="flex items-center gap-2 group">
           <Logo size="sm" />
-          <span className="font-heading text-xl font-bold tracking-tight transition-colors group-hover:text-gray-600">
-            Lattice
-          </span>
         </Link>
 
         {/* Desktop Navigation */}

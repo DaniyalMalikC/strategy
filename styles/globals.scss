@@ -2,49 +2,49 @@
 
 :root {
   /* Amplixa Brand Colors - Light Mode */
-  --brand-primary: #BEB5B4;
-  --brand-primary-50: #F5F3F3;
-  --brand-primary-100: #EBE8E7;
-  --brand-primary-200: #D7D1CF;
-  --brand-primary-300: #C3BAB7;
-  --brand-primary-400: #BEB5B4;
-  --brand-primary-500: #BEB5B4;
-  --brand-primary-600: #9B9190;
-  --brand-primary-700: #786D6C;
+  --brand-primary: #beb5b4;
+  --brand-primary-50: #f5f3f3;
+  --brand-primary-100: #ebe8e7;
+  --brand-primary-200: #d7d1cf;
+  --brand-primary-300: #c3bab7;
+  --brand-primary-400: #beb5b4;
+  --brand-primary-500: #beb5b4;
+  --brand-primary-600: #9b9190;
+  --brand-primary-700: #786d6c;
   --brand-primary-800: #554948;
   --brand-primary-900: #322524;
 
-  --brand-secondary: #9F9283;
-  --brand-secondary-50: #F3F1EE;
-  --brand-secondary-100: #E7E3DD;
-  --brand-secondary-200: #CFC7BB;
-  --brand-secondary-300: #B7AB99;
-  --brand-secondary-400: #9F9283;
-  --brand-secondary-500: #9F9283;
-  --brand-secondary-600: #7F7569;
-  --brand-secondary-700: #5F584F;
-  --brand-secondary-800: #3F3A34;
-  --brand-secondary-900: #1F1D1A;
+  --brand-secondary: #9f9283;
+  --brand-secondary-50: #f3f1ee;
+  --brand-secondary-100: #e7e3dd;
+  --brand-secondary-200: #cfc7bb;
+  --brand-secondary-300: #b7ab99;
+  --brand-secondary-400: #9f9283;
+  --brand-secondary-500: #9f9283;
+  --brand-secondary-600: #7f7569;
+  --brand-secondary-700: #5f584f;
+  --brand-secondary-800: #3f3a34;
+  --brand-secondary-900: #1f1d1a;
 
   /* Theme Variables */
   --background: #ffffff;
-  --foreground: #1F1D1A;
+  --foreground: #1f1d1a;
   --card: #ffffff;
-  --card-foreground: #1F1D1A;
+  --card-foreground: #1f1d1a;
   --popover: #ffffff;
-  --popover-foreground: #1F1D1A;
+  --popover-foreground: #1f1d1a;
   --primary: var(--brand-primary);
-  --primary-foreground: #1F1D1A;
+  --primary-foreground: #1f1d1a;
   --secondary: var(--brand-secondary);
   --secondary-foreground: #ffffff;
-  --muted: #F5F3F3;
-  --muted-foreground: #5F584F;
-  --accent: #F3F1EE;
-  --accent-foreground: #1F1D1A;
-  --destructive: #DC2626;
+  --muted: #f5f3f3;
+  --muted-foreground: #5f584f;
+  --accent: #f3f1ee;
+  --accent-foreground: #1f1d1a;
+  --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #E7E3DD;
-  --input: #E7E3DD;
+  --border: #e7e3dd;
+  --input: #e7e3dd;
   --ring: var(--brand-primary-600);
   --radius: 0.5rem;
 
@@ -56,24 +56,24 @@
 
 .dark {
   /* Amplixa Brand Colors - Dark Mode */
-  --background: #0F0E0D;
-  --foreground: #F5F3F3;
-  --card: #1F1D1A;
-  --card-foreground: #F5F3F3;
-  --popover: #1F1D1A;
-  --popover-foreground: #F5F3F3;
+  --background: #0f0e0d;
+  --foreground: #f5f3f3;
+  --card: #1f1d1a;
+  --card-foreground: #f5f3f3;
+  --popover: #1f1d1a;
+  --popover-foreground: #f5f3f3;
   --primary: var(--brand-primary-300);
-  --primary-foreground: #0F0E0D;
+  --primary-foreground: #0f0e0d;
   --secondary: var(--brand-secondary-300);
-  --secondary-foreground: #0F0E0D;
+  --secondary-foreground: #0f0e0d;
   --muted: #322524;
-  --muted-foreground: #B7AB99;
-  --accent: #3F3A34;
-  --accent-foreground: #F5F3F3;
-  --destructive: #EF4444;
+  --muted-foreground: #b7ab99;
+  --accent: #3f3a34;
+  --accent-foreground: #f5f3f3;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #3F3A34;
-  --input: #3F3A34;
+  --border: #3f3a34;
+  --input: #3f3a34;
   --ring: var(--brand-primary-400);
 }
 
@@ -163,17 +163,27 @@ a {
 
 /* Amplixa Font System */
 .font-logo {
-  font-family: var(--font-bebas), 'Bebas Neue', sans-serif;
+  font-family: var(--font-bebas), "Bebas Neue", sans-serif;
 }
 
 .font-heading {
-  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  font-family: var(--font-poppins), "Poppins", sans-serif;
 }
 
 .font-body {
-  font-family: var(--font-montserrat), 'Montserrat', 'Roboto', 'Open Sans', sans-serif;
+  font-family: var(--font-montserrat), "Montserrat", "Roboto", "Open Sans", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-poppins), 'Poppins', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-poppins), "Poppins", sans-serif;
+}
+
+.fade-left {
+  // -webkit-mask-image: linear-gradient(to right, transparent, black 30%);
+  mask-image: linear-gradient(to right, transparent, black 80%);
 }

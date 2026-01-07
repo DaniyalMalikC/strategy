@@ -3,14 +3,14 @@ import { cn } from '@/utils/cn';
 import { motion, useReducedMotion } from 'framer-motion';
 
 interface FloatingCardProps {
-  avatarSrc: string;
+  src: string;
   name: string;
   role: string;
   className?: string;
   delay?: number;
 }
 
-export function FloatingCard({ avatarSrc, name, role, className, delay = 0 }: FloatingCardProps) {
+export function FloatingCard({ src, name, role, className, delay = 0 }: FloatingCardProps) {
   const shouldReduceMotion = useReducedMotion();
 
   const animationProps = shouldReduceMotion
@@ -40,7 +40,7 @@ export function FloatingCard({ avatarSrc, name, role, className, delay = 0 }: Fl
         className,
       )}
     >
-      <Avatar src={avatarSrc} alt={name} size="md" />
+      <Avatar src={src} alt={name} size="md" />
       <div className="flex flex-col">
         <span className="text-sm font-bold text-gray-900 leading-tight">{name}</span>
         <span className="text-xs text-gray-500 leading-tight">{role}</span>
