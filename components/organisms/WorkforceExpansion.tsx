@@ -222,70 +222,75 @@ export function WorkforceExpansion() {
   return (
     <section className="relative w-full overflow-hidden bg-white py-16 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        {/* Header */}
-        <div className="mb-12 md:mb-16" data-aos="fade-up" data-aos-duration="800">
-          <h2 className="mb-4 text-4xl font-normal leading-tight text-gray-900 md:text-5xl lg:text-6xl">
-            Quickly Expand your
-            <br />
-            Workforce.
-          </h2>
-          <p className="max-w-2xl text-base text-gray-600 md:text-lg">
-            Take advantage of our global employment products to hire who you want, wherever you want - starting in
-            just minutes
-          </p>
-        </div>
+        {/* Two Column Layout */}
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+          {/* First Column */}
+          <div className="flex flex-col gap-6">
+            {/* Title and Subtitle - First Row */}
+            <div data-aos="fade-up" data-aos-duration="800">
+              <h2 className="mb-4 text-4xl font-normal leading-tight text-gray-900 md:text-5xl lg:text-6xl">
+                Quickly Expand your
+                <br />
+                Workforce.
+              </h2>
+              <p className="text-base text-gray-600 md:text-lg">
+                Take advantage of our global employment products to hire who you want, wherever you want - starting in
+                just minutes
+              </p>
+            </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Employee Card - Smaller */}
-          <EmployeeCard
-            avatars={[
-              'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
-              'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop',
-              'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop',
-            ]}
-            title="Hire an Employees"
-            label="Employees"
-            buttonText="Learn more about hiring employees"
-            className="sm:col-span-1"
-            delay={0}
-          />
+            {/* Employee and Force Cards - Second Row */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {/* Employee Card */}
+              <EmployeeCard
+                avatars={[
+                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
+                  'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop',
+                  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop',
+                ]}
+                title="Hire an Employees"
+                label="Employees"
+                buttonText="Learn more about hiring employees"
+                delay={0}
+              />
 
-          {/* Contractor Card - Smaller */}
-          <ContractorCard
-            image="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop"
-            title="Hire a Contractor"
-            label="Force"
-            buttonText="Learn more about hiring contractors"
-            className="sm:col-span-1"
-            delay={100}
-          />
+              {/* Contractor Card */}
+              <ContractorCard
+                image="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=600&fit=crop"
+                title="Hire a Contractor"
+                label="Force"
+                buttonText="Learn more about hiring contractors"
+                delay={100}
+              />
+            </div>
+          </div>
 
-          {/* Profile Card 1 - Larger */}
-          <ProfileCard
-            image="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=600&fit=crop"
-            name="Savannah Nguyen"
-            title="CEO, Los Angeles"
-            location="USA"
-            tag="Meeting"
-            buttonText="Read More."
-            variant="light"
-            className="sm:col-span-1"
-            delay={200}
-          />
+          {/* Second Column - Profile Cards */}
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-2">
+            {/* Profile Card 1 - Meeting */}
+            <ProfileCard
+              image="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=600&fit=crop"
+              name="Savannah Nguyen"
+              title="CEO, Los Angeles"
+              location="USA"
+              tag="Meeting"
+              buttonText="Read More."
+              variant="light"
+              delay={200}
+            />
 
-          {/* Profile Card 2 - Larger, full background */}
-          <ProfileCard
-            image="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=600&fit=crop"
-            name="Courtney Henry"
-            title="SM, London"
-            location="Great Britain"
-            tag="HR & manager"
-            buttonText="Read More."
-            variant="dark"
-            className="sm:col-span-1"
-            delay={300}
-          />
+            {/* Profile Card 2 - HR Manager */}
+            <ProfileCard
+              image="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=600&fit=crop"
+              name="Courtney Henry"
+              title="SM, London"
+              location="Great Britain"
+              tag="HR & manager"
+              buttonText="Read More."
+              variant="dark"
+              delay={300}
+            />
+          </div>
         </div>
 
         {/* Bottom Logos */}
