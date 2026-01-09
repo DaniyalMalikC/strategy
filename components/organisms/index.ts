@@ -4,3 +4,5 @@ export * from './Header';
 export * from './Footer';
 export * from './Hero';
 export * from './WorkforceExpansion';
+export * from './Teams';
+export * from './TeamContent';
