@@ -24,11 +24,19 @@ export function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 z-50 w-full transition-all duration-300',
-        isScrolled ? 'bg-[#f6f3ef]/95 backdrop-blur-md' : 'bg-[#f6f3ef]',
+        'fixed z-50 w-full transition-all duration-500',
+        isScrolled ? 'top-2' : 'top-0',
       )}
     >
-      <nav className="container mx-auto flex items-center justify-between px-6 py-3 md:px-8 md:py-4">
+      <div
+        className={cn(
+          'mx-auto transition-all duration-500',
+          isScrolled
+            ? 'max-w-7xl rounded-2xl bg-[#f6f3ef]/95 backdrop-blur-md shadow-lg animate-in slide-in-from-top-2 bounce-in'
+            : 'w-full bg-[#f6f3ef]',
+        )}
+      >
+        <nav className="container mx-auto flex items-center justify-between px-6 py-3 md:px-8 md:py-4">
         {/* Logo */}
         <Link href={ROUTES.HOME} className="flex items-center gap-2 group">
           <Logo size="sm" />
@@ -73,6 +81,7 @@ export function Header() {
           </button>
         </div>
       </nav>
+      </div>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
