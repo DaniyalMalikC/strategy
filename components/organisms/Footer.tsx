@@ -8,40 +8,30 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer
-      className="border-t backdrop-blur-md"
-      style={{ borderColor: 'var(--border)', backgroundColor: 'var(--background)' }}
-    >
+    <footer className="border-t border-gray-200 bg-[#f6f3ef] dark:border-gray-700 dark:bg-[#1a1816]">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand Section */}
           <div className="col-span-1 md:col-span-2">
             <Logo size="md" className="mb-4" />
-            <p className="mb-4 max-w-md font-body text-sm" style={{ color: 'var(--foreground)' }}>
+            <p className="mb-4 max-w-md font-body text-sm text-gray-700 dark:text-gray-300">
               {BRAND.shortDescription}
             </p>
-            <p
-              className="font-body text-sm font-semibold"
-              style={{ color: 'var(--brand-primary)' }}
-            >
+            <p className="font-body text-sm font-semibold text-[var(--brand-primary)]">
               {BRAND.tagline}
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="col-span-1">
-            <h3
-              className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider"
-              style={{ color: 'var(--foreground)' }}
-            >
+            <h3 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-gray-100">
               {LABELS.footer.company}
             </h3>
             <ul className="space-y-2 font-body text-sm">
               <li>
                 <Link
                   href={ROUTES.ABOUT}
-                  className="transition-colors"
-                  style={{ color: 'var(--foreground)' }}
+                  className="text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                 >
                   {LABELS.nav.about}
                 </Link>
@@ -49,8 +39,7 @@ export function Footer() {
               <li>
                 <Link
                   href={ROUTES.SERVICES}
-                  className="transition-colors"
-                  style={{ color: 'var(--foreground)' }}
+                  className="text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                 >
                   {LABELS.nav.services}
                 </Link>
@@ -58,8 +47,7 @@ export function Footer() {
               <li>
                 <Link
                   href={ROUTES.PORTFOLIO}
-                  className="transition-colors"
-                  style={{ color: 'var(--foreground)' }}
+                  className="text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                 >
                   {LABELS.nav.portfolio}
                 </Link>
@@ -67,8 +55,7 @@ export function Footer() {
               <li>
                 <Link
                   href={ROUTES.CONTACT}
-                  className="transition-colors"
-                  style={{ color: 'var(--foreground)' }}
+                  className="text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                 >
                   {LABELS.nav.contact}
                 </Link>
@@ -78,13 +65,10 @@ export function Footer() {
 
           {/* Contact Information */}
           <div className="col-span-1">
-            <h3
-              className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider"
-              style={{ color: 'var(--foreground)' }}
-            >
+            <h3 className="mb-4 font-heading text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-gray-100">
               {LABELS.footer.contact}
             </h3>
-            <ul className="space-y-2 font-body text-sm" style={{ color: 'var(--foreground)' }}>
+            <ul className="space-y-2 font-body text-sm text-gray-700 dark:text-gray-300">
               <li>
                 <a
                   href={`mailto:${CONTACT.email}`}
@@ -102,7 +86,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="pt-2">
-                <p className="text-xs" style={{ color: 'var(--muted-foreground)' }}>
+                <p className="text-xs text-gray-600 dark:text-gray-400">
                   {CONTACT.hours}
                 </p>
               </li>
@@ -111,9 +95,9 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-8 border-t pt-8" style={{ borderColor: 'var(--border)' }}>
+        <div className="mt-8 border-t border-gray-200 pt-8 dark:border-gray-700">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
-            <p className="font-body text-sm" style={{ color: 'var(--muted-foreground)' }}>
+            <p className="font-body text-sm text-gray-600 dark:text-gray-400">
               © {currentYear} {BRAND.name}. All rights reserved.
             </p>
 
@@ -123,8 +107,7 @@ export function Footer() {
                 href={SOCIAL.links.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors"
-                style={{ color: 'var(--foreground)' }}
+                className="text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                 aria-label={`Follow us on Twitter ${SOCIAL.handles.twitter}`}
               >
                 <Icon icon="mdi:twitter" size={24} />
@@ -133,8 +116,7 @@ export function Footer() {
                 href={SOCIAL.links.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors"
-                style={{ color: 'var(--foreground)' }}
+                className="text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                 aria-label="Follow us on LinkedIn"
               >
                 <Icon icon="mdi:linkedin" size={24} />
@@ -143,8 +125,7 @@ export function Footer() {
                 href={SOCIAL.links.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors"
-                style={{ color: 'var(--foreground)' }}
+                className="text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                 aria-label="Follow us on GitHub"
               >
                 <Icon icon="mdi:github" size={24} />
@@ -153,8 +134,7 @@ export function Footer() {
                 href={SOCIAL.links.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors"
-                style={{ color: 'var(--foreground)' }}
+                className="text-gray-700 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-100"
                 aria-label="Follow us on Instagram"
               >
                 <Icon icon="mdi:instagram" size={24} />

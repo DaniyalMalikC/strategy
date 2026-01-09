@@ -5,6 +5,7 @@ import { Icon } from '@/components/atoms/Icon';
 import { Logo } from '@/components/atoms/Logo';
 import { ROUTES } from '@/constants';
 import { useIsScrolled } from '@/hooks/useScrollPosition';
+import { useThemeStore } from '@/stores/themeStore';
 import { cn } from '@/utils/cn';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -20,6 +21,7 @@ const NAV_LINKS = [
 export function Header() {
   const isScrolled = useIsScrolled();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useThemeStore();
 
   return (
     <header
@@ -32,8 +34,8 @@ export function Header() {
         className={cn(
           'mx-auto transition-all duration-500',
           isScrolled
-            ? 'max-w-7xl rounded-2xl bg-[#f6f3ef]/95 backdrop-blur-md shadow-lg animate-in slide-in-from-top-2 bounce-in'
-            : 'w-full bg-[#f6f3ef]',
+            ? 'max-w-7xl rounded-2xl bg-[#f6f3ef]/95 backdrop-blur-md shadow-lg animate-in slide-in-from-top-2 bounce-in dark:bg-[#1a1816]/95'
+            : 'w-full bg-[#f6f3ef] dark:bg-[#1a1816]',
         )}
       >
         <nav className="container mx-auto flex items-center justify-between px-6 py-3 md:px-8 md:py-4">
@@ -48,7 +50,7 @@ export function Header() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-[15px] font-normal text-gray-900 transition-colors hover:text-gray-600"
+              className="text-[15px] font-normal text-gray-900 transition-colors hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300"
             >
               {link.label}
             </Link>
@@ -57,27 +59,32 @@ export function Header() {
 
         {/* Actions */}
         <div className="flex items-center gap-2 md:gap-3">
-          <Button className="hidden rounded-full bg-black px-5 py-2 text-[14px] font-medium text-white hover:bg-gray-800 md:inline-flex items-center gap-1.5 shadow-none">
+          <Button className="hidden rounded-full bg-black px-5 py-2 text-[14px] font-medium text-white hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 md:inline-flex items-center gap-1.5 shadow-none">
             Login <Icon icon="ph:arrow-up-right-bold" size={14} />
           </Button>
 
           <button
             type="button"
-            className="flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-gray-100 md:h-10 md:w-10"
-            aria-label="Search"
+            onClick={toggleTheme}
+            className="flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-gray-100 dark:hover:bg-gray-800 md:h-10 md:w-10"
+            aria-label="Toggle theme"
           >
-            <Icon icon="ph:magnifying-glass-bold" size={18} className="text-gray-700" />
+            <Icon
+              icon={theme === 'dark' ? 'ph:sun-bold' : 'ph:moon-bold'}
+              size={18}
+              className="text-gray-700 dark:text-gray-300"
+            />
           </button>
 
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-[14px] font-medium text-gray-900 transition-colors hover:bg-gray-50 md:hidden"
+            className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-[14px] font-medium text-gray-900 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700 md:hidden"
             aria-label="Menu"
             aria-expanded={isMobileMenuOpen}
           >
             <span>Menu</span>
-            <Icon icon={isMobileMenuOpen ? 'ph:x-bold' : 'ph:equals-bold'} size={18} className="text-gray-700" />
+            <Icon icon={isMobileMenuOpen ? 'ph:x-bold' : 'ph:equals-bold'} size={18} className="text-gray-700 dark:text-gray-300" />
           </button>
         </div>
       </nav>
@@ -85,7 +92,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-gray-200 bg-[#f6f3ef]">
+        <div className="border-t border-gray-200 bg-[#f6f3ef] dark:border-gray-700 dark:bg-[#1a1816] md:hidden">
           <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col gap-4">
               {NAV_LINKS.map((link) => (
@@ -93,12 +100,12 @@ export function Header() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-[15px] font-normal text-gray-900 transition-colors hover:text-gray-600 py-2"
+                  className="py-2 text-[15px] font-normal text-gray-900 transition-colors hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300"
                 >
                   {link.label}
                 </Link>
               ))}
-              <Button className="rounded-full bg-black px-5 py-2 text-[14px] font-medium text-white hover:bg-gray-800 inline-flex items-center justify-center gap-1.5 shadow-none mt-2">
+              <Button className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-black px-5 py-2 text-[14px] font-medium text-white shadow-none hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
                 Login <Icon icon="ph:arrow-up-right-bold" size={14} />
               </Button>
             </div>

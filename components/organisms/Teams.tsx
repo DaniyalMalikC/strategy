@@ -54,7 +54,7 @@ export function Teams() {
     <>
       <section className="relative w-full overflow-hidden py-16 md:py-24 lg:py-32">
         {/* Background Image */}
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 ">
           <div
             className="absolute inset-0 bg-cover bg-center"
             style={{

@@ -20,12 +20,12 @@ function EmployeeCard({ avatars, title, label, buttonText, className, delay = 0 
       data-aos-delay={delay}
       data-aos-duration="800"
       className={cn(
-        'group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-[#f0ebe6] p-6 transition-all duration-500 hover:shadow-xl',
+        'group relative flex flex-col justify-between overflow-hidden rounded-3xl bg-[#f0ebe6] p-6 transition-all duration-500 hover:shadow-xl dark:bg-[#2a2624]',
         className,
       )}
     >
       <div className="mb-8">
-        <span className="inline-block rounded-full border border-gray-900 bg-white px-4 py-1.5 text-sm font-normal text-gray-900">
+        <span className="inline-block rounded-full border border-gray-900 bg-white px-4 py-1.5 text-sm font-normal text-gray-900 dark:border-gray-300 dark:bg-gray-800 dark:text-gray-100">
           {label}
         </span>
       </div>
@@ -52,10 +52,10 @@ function EmployeeCard({ avatars, title, label, buttonText, className, delay = 0 
       </div>
 
       <div className="flex items-end justify-between">
-        <h3 className="max-w-[70%] text-xl font-normal leading-tight text-gray-900 md:text-2xl">{title}</h3>
+        <h3 className="max-w-[70%] text-xl font-normal leading-tight text-gray-900 dark:text-gray-100 md:text-2xl">{title}</h3>
         <button
           type="button"
-          className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-gray-900 bg-white text-gray-900 transition-all duration-300 hover:bg-gray-900 hover:text-white"
+          className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-gray-900 bg-white text-gray-900 transition-all duration-300 hover:bg-gray-900 hover:text-white dark:border-gray-300 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
           aria-label={buttonText}
         >
           <Icon icon="ph:arrow-up-right-bold" size={18} />
@@ -144,7 +144,7 @@ function ProfileCard({
       data-aos-duration="800"
       className={cn(
         'group relative flex flex-col overflow-hidden rounded-3xl transition-all duration-500 hover:shadow-xl',
-        isLight ? 'bg-gray-300' : '',
+        isLight ? 'bg-gray-300 dark:bg-[#2a2624]' : '',
         className,
       )}
     >
@@ -157,7 +157,7 @@ function ProfileCard({
             </div>
             <button
               type="button"
-              className="rounded-full bg-white px-4 py-1.5 text-sm font-normal text-gray-900 transition-all duration-300 hover:bg-gray-100 flex items-center gap-1.5"
+              className="flex items-center gap-1.5 rounded-full bg-white px-4 py-1.5 text-sm font-normal text-gray-900 transition-all duration-300 hover:bg-gray-100 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700"
               aria-label={tag}
             >
               {tag}
@@ -167,15 +167,15 @@ function ProfileCard({
 
           <div className="px-6 pb-6">
             <div className="mb-3">
-              <h3 className="text-xl font-normal text-gray-900 md:text-2xl">{name}</h3>
-              <p className="mt-1 text-sm text-gray-600">
+              <h3 className="text-xl font-normal text-gray-900 dark:text-gray-100 md:text-2xl">{name}</h3>
+              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
                 {title}, {location}
               </p>
             </div>
 
             <button
               type="button"
-              className="inline-flex items-center gap-2 text-sm font-normal text-gray-900 transition-colors hover:text-gray-600"
+              className="inline-flex items-center gap-2 text-sm font-normal text-gray-900 transition-colors hover:text-gray-600 dark:text-gray-100 dark:hover:text-gray-300"
               aria-label={buttonText}
             >
               {buttonText}
@@ -220,7 +220,7 @@ function ProfileCard({
 
 export function WorkforceExpansion() {
   return (
-    <section className="relative w-full overflow-hidden bg-white py-16 md:py-24 lg:py-32">
+    <section className="relative w-full overflow-hidden bg-white py-16 dark:bg-[#0f0e0d] md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
         {/* Two Column Layout */}
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
@@ -228,12 +228,12 @@ export function WorkforceExpansion() {
           <div className="flex flex-col gap-6">
             {/* Title and Subtitle - First Row */}
             <div data-aos="fade-up" data-aos-duration="800">
-              <h2 className="mb-4 text-4xl font-normal leading-tight text-gray-900 md:text-5xl lg:text-6xl">
+              <h2 className="mb-4 text-4xl font-normal leading-tight text-gray-900 dark:text-gray-100 md:text-5xl lg:text-6xl">
                 Quickly Expand your
                 <br />
                 Workforce.
               </h2>
-              <p className="text-base text-gray-600 md:text-lg">
+              <p className="text-base text-gray-600 dark:text-gray-400 md:text-lg">
                 Take advantage of our global employment products to hire who you want, wherever you want - starting in
                 just minutes
               </p>
@@ -304,9 +304,9 @@ export function WorkforceExpansion() {
             {['Assembled', 'Thumbtack', 'Lattice', 'Benchling'].map((company) => (
               <div
                 key={company}
-                className="flex items-center gap-2 text-xl font-normal text-gray-900 md:text-2xl"
+                className="flex items-center gap-2 text-xl font-normal text-gray-900 dark:text-gray-100 md:text-2xl"
               >
-                <Icon icon="ph:square-logo-bold" size={24} className="text-gray-900" />
+                <Icon icon="ph:square-logo-bold" size={24} className="text-gray-900 dark:text-gray-100" />
                 <span>{company}</span>
               </div>
             ))}

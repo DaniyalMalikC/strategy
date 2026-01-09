@@ -1,5 +1,7 @@
 @use "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   /* Amplixa Brand Colors - Light Mode */
   --brand-primary: #beb5b4;

@@ -48,10 +48,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${bebasNeue.variable} ${poppins.variable} ${montserrat.variable}`}>
+      <body className={`${bebasNeue.variable} ${poppins.variable} ${montserrat.variable} bg-white dark:bg-[#0f0e0d] transition-colors duration-300`}>
         <ErrorBoundary>
           <Providers>
-            <div className="flex min-h-screen flex-col">
+            <div className="flex min-h-screen flex-col bg-white dark:bg-[#0f0e0d]">
               <Header />
               <main className="flex-1">{children}</main>
               <Footer />

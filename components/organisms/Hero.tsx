@@ -26,20 +26,20 @@ export function Hero() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#f6f3ef] pb-24 pt-20 md:pt-24">
+    <section className="relative w-full overflow-hidden bg-[#f6f3ef] pb-24 pt-20 dark:bg-[#1a1816] md:pt-24">
       <div className="container mx-auto px-4 md:px-6">
         {/* Hero Content */}
         <div className="mx-auto max-w-5xl text-center">
           <motion.h1
             {...getAnimationProps(0)}
-            className="font-heading text-[2.875rem] font-medium leading-[1.05] tracking-tight text-gray-900 sm:text-6xl md:text-[4.25rem] lg:text-[5.5rem]"
+            className="font-heading text-[2.875rem] font-medium leading-[1.05] tracking-tight text-gray-900 dark:text-gray-100 sm:text-6xl md:text-[4.25rem] lg:text-[5.5rem]"
           >
             {heroContent.heading}
           </motion.h1>
 
           <motion.p
             {...getAnimationProps(0.15)}
-            className="mx-auto mt-6 max-w-3xl text-base text-gray-600 md:text-lg"
+            className="mx-auto mt-6 max-w-3xl text-base text-gray-600 dark:text-gray-400 md:text-lg"
           >
             {heroContent.subheading}
           </motion.p>
@@ -48,13 +48,13 @@ export function Hero() {
             {...getAnimationProps(0.3)}
             className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
-            <Button className="h-12 rounded-full bg-black px-8 text-base font-medium text-white shadow-none hover:bg-gray-800 focus:ring-gray-800">
+            <Button className="h-12 rounded-full bg-black px-8 text-base font-medium text-white shadow-none hover:bg-gray-800 focus:ring-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
               {heroContent.primaryCta.label}{' '}
               <Icon icon={heroContent.primaryCta.icon} className="ml-2" />
             </Button>
             <Button
               variant="outline"
-              className="h-12 rounded-full border-gray-300 px-8 text-base font-medium text-gray-900 hover:bg-gray-100"
+              className="h-12 rounded-full border-gray-300 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-100 dark:hover:bg-gray-800"
             >
               {heroContent.secondaryCta.label}{' '}
               <Icon icon={heroContent.secondaryCta.icon} className="ml-2" />

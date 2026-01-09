@@ -11,12 +11,19 @@ interface ThemeStore {
 export const useThemeStore = create<ThemeStore>()(
   persist(
     (set, get) => ({
-      theme: 'system',
+      theme: 'light',
       setTheme: (theme) => set({ theme }),
       toggleTheme: () => {
         const currentTheme = get().theme;
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        set({ theme: newTheme });
+        // If system, get actual theme and toggle it
+        if (currentTheme === 'system') {
+          const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          const newTheme = systemTheme === 'light' ? 'dark' : 'light';
+          set({ theme: newTheme });
+        } else {
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          set({ theme: newTheme });
+        }
       },
     }),
     {
