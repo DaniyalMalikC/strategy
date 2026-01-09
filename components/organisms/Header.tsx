@@ -34,7 +34,7 @@ export function Header() {
         className={cn(
           'mx-auto transition-all duration-500',
           isScrolled
-            ? 'max-w-7xl rounded-2xl bg-[color-mix(in_srgb,var(--brand-primary)_95%,transparent)] backdrop-blur-md shadow-lg animate-in slide-in-from-top-2 bounce-in mx-4 dark:bg-[#1a1816]/95'
+            ? 'max-w-7xl rounded-2xl bg-[color-mix(in_srgb,var(--brand-primary)_95%,transparent)] backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12),0_2px_10px_rgb(0,0,0,0.08),inset_0_1px_0_rgb(255,255,255,0.1)] animate-in slide-in-from-top-2 bounce-in mx-3 sm:mx-4 lg:mx-auto dark:bg-[#1a1816]/95 dark:shadow-[0_8px_30px_rgb(0,0,0,0.4),0_2px_10px_rgb(0,0,0,0.3),inset_0_1px_0_rgb(255,255,255,0.05)]'
             : 'w-full bg-[var(--brand-primary)] dark:bg-[#1a1816]',
         )}
       >
