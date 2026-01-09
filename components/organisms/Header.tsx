@@ -34,7 +34,7 @@ export function Header() {
         className={cn(
           'mx-auto transition-all duration-500',
           isScrolled
-            ? 'max-w-7xl rounded-2xl bg-[color-mix(in_srgb,var(--brand-primary)_95%,transparent)] backdrop-blur-md shadow-lg animate-in slide-in-from-top-2 bounce-in dark:bg-[#1a1816]/95'
+            ? 'max-w-7xl rounded-2xl bg-[color-mix(in_srgb,var(--brand-primary)_95%,transparent)] backdrop-blur-md shadow-lg animate-in slide-in-from-top-2 bounce-in mx-4 dark:bg-[#1a1816]/95'
             : 'w-full bg-[var(--brand-primary)] dark:bg-[#1a1816]',
         )}
       >
