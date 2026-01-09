@@ -8,7 +8,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gray-200 bg-[#f6f3ef] dark:border-gray-700 dark:bg-[#1a1816]">
+    <footer className="border-t border-[var(--brand-secondary)] bg-[var(--brand-primary)] dark:border-[var(--brand-secondary)] dark:bg-[#1a1816]">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand Section */}
@@ -95,7 +95,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="mt-8 border-t border-gray-200 pt-8 dark:border-gray-700">
+        <div className="mt-8 border-t border-[var(--brand-secondary)] pt-8 dark:border-[var(--brand-secondary)]">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <p className="font-body text-sm text-gray-600 dark:text-gray-400">
               © {currentYear} {BRAND.name}. All rights reserved.

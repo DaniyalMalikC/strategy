@@ -89,8 +89,8 @@ export function Logo({ className, variant = 'full', size = 'md' }: LogoProps) {
         </text>
       </svg>
       <span
-        className="font-logo text-2xl font-normal tracking-wider"
-        style={{ color: 'var(--brand-primary)' }}
+        className="font-logo text-2xl font-normal tracking-wider text-gray-900 dark:text-gray-100"
+        // style={{ color: 'var(--brand-primary)' }}
       >
         AMPLIXA
       </span>

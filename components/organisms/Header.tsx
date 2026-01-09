@@ -34,8 +34,8 @@ export function Header() {
         className={cn(
           'mx-auto transition-all duration-500',
           isScrolled
-            ? 'max-w-7xl rounded-2xl bg-[#f6f3ef]/95 backdrop-blur-md shadow-lg animate-in slide-in-from-top-2 bounce-in dark:bg-[#1a1816]/95'
-            : 'w-full bg-[#f6f3ef] dark:bg-[#1a1816]',
+            ? 'max-w-7xl rounded-2xl bg-[color-mix(in_srgb,var(--brand-primary)_95%,transparent)] backdrop-blur-md shadow-lg animate-in slide-in-from-top-2 bounce-in dark:bg-[#1a1816]/95'
+            : 'w-full bg-[var(--brand-primary)] dark:bg-[#1a1816]',
         )}
       >
         <nav className="container mx-auto flex items-center justify-between px-6 py-3 md:px-8 md:py-4">
@@ -92,7 +92,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="border-t border-gray-200 bg-[#f6f3ef] dark:border-gray-700 dark:bg-[#1a1816] md:hidden">
+        <div className="border-t border-gray-200 bg-[var(--brand-primary)] dark:border-gray-700 dark:bg-[#1a1816] md:hidden">
           <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col gap-4">
               {NAV_LINKS.map((link) => (
