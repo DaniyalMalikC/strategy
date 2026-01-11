@@ -79,7 +79,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 text-[14px] font-medium text-gray-900 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700 md:hidden"
+            className="flex items-center gap-2 rounded-full border border-[var(--color-secondary)] bg-white px-4 py-2 text-[14px] font-medium text-gray-900 transition-colors hover:bg-gray-50 dark:border-[var(--color-secondary)] dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700 md:hidden"
             aria-label="Menu"
             aria-expanded={isMobileMenuOpen}
           >
@@ -92,7 +92,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="border-t border-gray-200 bg-[var(--brand-primary)] dark:border-gray-700 dark:bg-[#1a1816] md:hidden">
+        <div className="border-t border-[var(--color-secondary)] bg-[var(--brand-primary)] dark:border-[var(--color-secondary)] dark:bg-[#1a1816] md:hidden">
           <div className="container mx-auto px-6 py-4">
             <div className="flex flex-col gap-4">
               {NAV_LINKS.map((link) => (
